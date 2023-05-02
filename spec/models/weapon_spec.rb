@@ -11,4 +11,8 @@ RSpec.describe Weapon, type: :model do
     expect(weapon.title).to eq("#{weapon.name} ##{weapon.level}")
   end
 
+  it 'verification of power of weapon with current power' do
+    weapon = build(:weapon)
+    expect(weapon.current_power)
+  end
 end
