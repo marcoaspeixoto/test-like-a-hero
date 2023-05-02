@@ -7,4 +7,7 @@ class Weapon < ApplicationRecord
     (power_base + ((level - 1) * power_step))
   end
 
+  def title
+    "#{name} ##{level}"
+  end
 end
