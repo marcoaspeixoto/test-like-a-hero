@@ -9,7 +9,11 @@ RSpec.describe "Users", type: :request do
     end
 
     it "the user's title is present" do
-
+      users = create_list(:user, 3)
+      get users_path
+      users.each do |user|
+        expect(response.body).to include(user.title)
+      end
     end
   end
 
