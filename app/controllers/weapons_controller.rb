@@ -9,6 +9,7 @@ class WeaponsController < ApplicationController
   end
 
   def delete
+    @weapon.destroy
   end
 
   def show
