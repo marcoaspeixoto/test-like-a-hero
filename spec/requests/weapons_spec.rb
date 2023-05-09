@@ -8,11 +8,11 @@ RSpec.describe "Weapons", type: :request do
       expect(response).to have_http_status(200)
     end
 
-    it "the user's title is present" do
-      users = create_list(:user, 3)
-      get users_path
-      users.each do |user|
-        expect(response.body).to include(user.title)
+    it "the name of the weapon is present" do
+      weapons = create_list(:weapon, 3)
+      get weapons_path
+      weapons.each do |weapon|
+        expect(response.body).to include(weapon.name)
       end
     end
   end
@@ -36,4 +36,3 @@ RSpec.describe "Weapons", type: :request do
     end
   end
 end
-
