@@ -14,4 +14,13 @@ class WeaponsController < ApplicationController
 
   def show
   end
+
+  private
+
+  def weapon_params
+    params.require(:weapon).permit(:name, :description, :power_base, :power_step, :level)
+  end
 end
+
+
+
