@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec/factories/weapons'
 
 RSpec.describe Weapon, type: :model do
   it 'creat a random weapon' do
