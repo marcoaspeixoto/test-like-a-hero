@@ -10,6 +10,8 @@ class EnemiesController < ApplicationController
   end
 
   def destroy
+    @enemy.destroy
+    head 204
   end
 
   private
