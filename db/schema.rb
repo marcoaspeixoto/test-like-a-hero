@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2023_05_16_173042) do
     t.integer "power_base"
     t.integer "power_step"
     t.integer "level"
-    t.integer "kink"
+    t.integer "kind"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
