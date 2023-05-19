@@ -56,7 +56,10 @@ RSpec.describe "Enemies", type: :request do
         delete '/enemies/0'
         expect(response).to have_http_status(404)
       end
-      it 'returns a not found message'
+      it 'returns a not found message' do
+        delete '/enemies/0'
+        expect(response.body).to match(/Couldn't find Enemy/)
+      end
     end
   end
 end
