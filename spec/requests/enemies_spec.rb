@@ -40,7 +40,11 @@ RSpec.describe "Enemies", type: :request do
 
   describe 'DELETE /enemies' do
     context 'when the enemy existis' do
-      it 'returns status code 200'
+      it 'returns status code 204' do
+        enemy = create(:enemy)
+        delete "/enemies/#{enemy.id}"
+        expect(response).to have_http_status(204)
+      end
       it 'destroy the record'
     end
 
