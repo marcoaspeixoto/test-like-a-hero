@@ -1,6 +1,18 @@
 class EnemiesController < ApplicationController
   before_action :set_enemy
 
+  def index
+    @enemy = Enemy.all
+  end
+
+  def show
+  end
+
+  def create
+    @enemy = Enemy.create(enemy_params)
+    redirect_to enemies_path
+  end
+
   def update
     if @enemy.update(enemy_params)
       render json: @enemy, status: :ok
